@@ -45,8 +45,11 @@ console.log(namesUppperCase);
 
 // Utilice map para asignar el array de productos a sus correspondientes precios.
 
-const prices = products.map((product) => product.price);
+const prices = products.map((product) => product.product + " = "+product.price);
   console.log(prices);
+
+const prices2 = products.map((product) => product.price);
+  console.log(prices2);
 
 // Utilice filter para filtrar los países que contienen land.
 
