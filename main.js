@@ -2012,7 +2012,7 @@ const countries = [
   }
 ]
 
-
+const countriesNortEuw = ["Estoniya","Finlandia","Suecia","Dinamarca2","Noruega", "Islandia"];
 const countries2 = ["US", "Sweden", "Denmark", "Norway", "IceLand"];
 const names = ["Joseph", "Mathias", "Elias", "Brook"];
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -2091,6 +2091,8 @@ const products = [
 // const priceProduct = products.filter((item) => {
 //   const price = parseFloat(item.price);
 //   return price;
+// })
+// console.log(priceProduct);
 
 // // 16.Declara una función llamada getStringLists que toma un array como parámetro y devuelve un array sólo con elementos string.
 
@@ -2104,8 +2106,18 @@ const products = [
 
 // // 18.Utiliza reduce para concatenar todos los países y producir esta frase: Estonia, Finland, Sweden, Denmark, Norway, y IceLand son países del norte de Europa
 
-// 19.Explique la diferencia entre some y every
+// const CountriesEu = countriesNortEuw.reduce((acc, curr, index) => {
+//   if (index === countriesNortEuw.length-1) {
+//     return `${acc}, y ${curr} son países del norte de Europa`;
+//   } else {
+//     return `${acc} , ${curr}`;
+//   }
+//   })
+//   console.log(CountriesEu);
 
+// // 19.Explique la diferencia entre some y every
+
+// some se utiliza para comprobar algun elemento del array cumple la condicion, mientras que every comprueba si todos los elementos del array tiene algo similar
 
 
 // // 20.Utilice some para comprobar si la longitud de algunos nombres es superior a siete en el array de nombres.
@@ -2113,7 +2125,47 @@ const products = [
 // const nameslenght =  names.some((name) => name.length > 7)
 // console.log(nameslenght);
 
-// 21. Utilice every para comprobar si todos los países contienen la palabra land.
+// // 21. Utilice every para comprobar si todos los países contienen la palabra land.
 
-const now = new Date();
-console.log(now);
+// const contriesIncludesLand = countries.every((country) => country.include)
+// console.log(contriesIncludesLand);
+
+// // 22.Explique la diferencia entre find y findIndex.
+
+// Find en cuentra el primere elemento que le indiquemos y findIndex nos da de resultado la posicion en el indice del array del elemento que le indiquemos
+
+// // 23.Utilice find para encontrar el primer país que contenga sólo seis letras en el array de países.
+
+// const firstContainigSixLetters = countries.find((country) => country.name.length === 6)
+
+// console.log(firstContainigSixLetters);
+
+// // 24.Utilice findIndex para encontrar la posición del primer país que contenga sólo seis letras en el array de países.
+
+// const IndexFirstContainigSixLetters = countries.findIndex((country) => country.name.length === 6)
+// console.log(IndexFirstContainigSixLetters);
+
+// // 25.Utilice findIndex para encontrar la posición de Norway si no existe en el array obtendrá -1.
+
+// const searchNorway = countries.findIndex((country) => country.name.toLowerCase() === 'norway')
+// console.log(searchNorway);
+
+// // 26.Utilice findIndex para encontrar la posición de Russia si no existe en el array obtendrá -1.
+
+// const searchRussia = countries.findIndex((country) => country.name.toLowerCase() === 'russia')
+// console.log(searchRussia);
+
+// 27.Encuentre la suma del precio de los productos usando sólo reduce(callback)).
+disc
+// const priceTotalProducts = products.reduce((acc, item) => {
+//   if (typeof item.price === 'number') {
+//     return acc + item.price;
+//   } else {
+//     return acc;
+//   }
+// }, 0);
+
+// console.log(priceTotalProducts);
+
+// 28.Cree una función que retorne un array de objetos, que es la letra y el número de veces que la letra usa para empezar el nombre de un país.
+
